@@ -1,0 +1,44 @@
+{
+  "_comment": "WHAT IS THIS FILE? tsconfig.json configures the TypeScript compiler. TypeScript is a superset of JavaScript that adds 'types' — labels that tell you what kind of data a variable holds (a number, a string, an object, etc.). This file tells TypeScript how strict to be, which files to check, and how to understand your code. WHY DOES IT EXIST? Without this file, TypeScript wouldn't know how to compile your .ts and .tsx files into JavaScript that browsers and Node.js can run. The settings here are the standard recommended settings for a Next.js 14 project.",
+  "compilerOptions": {
+    /* Language and environment */
+    "target": "es2017",                          /* Compile to ES2017 JavaScript — supported by all modern browsers */
+    "lib": ["dom", "dom.iterable", "esnext"],    /* Include type definitions for browser APIs and modern JS features */
+    "allowJs": true,                             /* Allow .js files alongside .ts files (useful during migration) */
+    "skipLibCheck": true,                        /* Skip type-checking of node_modules — speeds up compilation */
+    "strict": true,                              /* Enable all strict type checks — catches more bugs at compile time */
+
+    /* Module system */
+    "noEmit": true,                              /* Don't output compiled files — Next.js handles that internally */
+    "esModuleInterop": true,                     /* Allow 'import X from Y' syntax for CommonJS modules */
+    "module": "esnext",                          /* Use modern ES module syntax */
+    "moduleResolution": "bundler",               /* Use bundler-style module resolution (works with Next.js/Vite) */
+    "resolveJsonModule": true,                   /* Allow importing .json files directly in TypeScript */
+    "isolatedModules": true,                     /* Ensure each file can be compiled independently (required by Next.js) */
+    "jsx": "preserve",                           /* Keep JSX as-is — Next.js transforms it during build */
+
+    /* Build performance */
+    "incremental": true,                         /* Cache compilation results to speed up subsequent builds */
+
+    /* Next.js plugin */
+    "plugins": [
+      {
+        "name": "next"                           /* Enables Next.js-specific TypeScript features and error checking */
+      }
+    ],
+
+    /* Path aliases — lets you write '@/components/Button' instead of '../../components/Button' */
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",          /* Auto-generated Next.js type declarations */
+    "**/*.ts",                /* All TypeScript files */
+    "**/*.tsx",               /* All TypeScript + JSX files (React components) */
+    ".next/types/**/*.ts"     /* Next.js internal generated types */
+  ],
+  "exclude": [
+    "node_modules"            /* Never type-check installed packages */
+  ]
+}

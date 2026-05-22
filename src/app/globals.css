@@ -1,0 +1,28 @@
+/*
+ * globals.css
+ *
+ * WHAT IS THIS FILE?
+ * This is the global CSS file for the entire application.
+ * It's imported once in the root layout (layout.tsx) and applies to every page.
+ *
+ * WHAT ARE THESE THREE LINES?
+ * These are Tailwind CSS "directives" — special instructions that tell PostCSS
+ * to inject Tailwind's styles here during the build process.
+ *
+ * - @tailwind base:       Resets browser default styles so everything looks
+ *                         consistent across Chrome, Firefox, Safari, etc.
+ *
+ * - @tailwind components: Injects any component classes you define with @layer components.
+ *                         (We don't have any yet, but the directive must be here.)
+ *
+ * - @tailwind utilities:  Injects ALL the utility classes you used in your code
+ *                         (like text-blue-500, p-4, flex, etc.)
+ *
+ * WHY ONLY THREE LINES?
+ * Tailwind generates all the CSS you need from your component files automatically.
+ * You rarely need to write custom CSS — the utility classes handle everything.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
